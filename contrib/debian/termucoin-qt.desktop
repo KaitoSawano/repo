@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Termucoin Core
+Comment=Connect to the Termucoin P2P Network
+Comment[de]=Verbinde mit dem Termucoin peer-to-peer Netzwerk
+Comment[fr]=Termucoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Termucoin, eşten eşe kriptografik sanal para birimi
+Exec=termucoin-qt %u
+Terminal=false
+Type=Application
+Icon=termucoin128
+MimeType=x-scheme-handler/termucoin;
+Categories=Office;Finance;
