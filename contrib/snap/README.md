@@ -1,6 +1,6 @@
-# Termucoin Snap Packaging
+# Nerocash Snap Packaging
 
-Commands for building and uploading a Termucoin Core Snap to the Snap Store. Anyone on amd64 (x86_64), arm64 (aarch64), or i386 (i686) should be able to build it themselves with these instructions. This would pull the official Termucoin binaries from the releases page, verify them, and install them on a user's machine.
+Commands for building and uploading a Nerocash Core Snap to the Snap Store. Anyone on amd64 (x86_64), arm64 (aarch64), or i386 (i686) should be able to build it themselves with these instructions. This would pull the official Nerocash binaries from the releases page, verify them, and install them on a user's machine.
 
 ## Building Locally
 ```
@@ -17,21 +17,21 @@ snap install \*.snap --devmode
 ### To Upload to the Snap Store
 ```
 snapcraft login
-snapcraft register termucoin-core
+snapcraft register nerocash-core
 snapcraft upload \*.snap
-sudo snap install termucoin-core
+sudo snap install nerocash-core
 ```
 
 ### Usage
 ```
-termucoin-unofficial.cli # for termucoin-cli
-termucoin-unofficial.d # for termucoind
-termucoin-unofficial.qt # for termucoin-qt
-termucoin-unofficial.test # for test_termucoin
-termucoin-unofficial.tx # for termucoin-tx
+nerocash-unofficial.cli # for nerocash-cli
+nerocash-unofficial.d # for nerocashd
+nerocash-unofficial.qt # for nerocash-qt
+nerocash-unofficial.test # for test_nerocash
+nerocash-unofficial.tx # for nerocash-tx
 ```
 
 ### Uninstalling
 ```
-sudo snap remove termucoin-unofficial
+sudo snap remove nerocash-unofficial
 ```

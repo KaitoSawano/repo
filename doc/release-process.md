@@ -3,9 +3,9 @@ Release Process
 
 Before every release candidate:
 
-* Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/termucoin/termucoin/blob/master/doc/translation_process.md#synchronising-translations).
+* Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/nerocash/nerocash/blob/master/doc/translation_process.md#synchronising-translations).
 
-* Update manpages, see [gen-manpages.sh](https://github.com/termucoin/termucoin/blob/master/contrib/devtools/README.md#gen-manpagessh).
+* Update manpages, see [gen-manpages.sh](https://github.com/nerocash/nerocash/blob/master/contrib/devtools/README.md#gen-manpagessh).
 
 Before every minor and major release:
 
@@ -21,7 +21,7 @@ Before every minor and major release:
 
 Before every major release:
 
-* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/termucoin/termucoin/pull/7415) for an example.
+* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/nerocash/nerocash/pull/7415) for an example.
 * Update [`BLOCK_CHAIN_SIZE`](/src/qt/intro.cpp) to the current size plus some overhead.
 
 ### First time / New builders
@@ -31,12 +31,12 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
-    git clone https://github.com/termucoin-core/gitian.sigs.git
-    git clone https://github.com/termucoin-core/termucoin-detached-sigs.git
+    git clone https://github.com/nerocash-core/gitian.sigs.git
+    git clone https://github.com/nerocash-core/nerocash-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/termucoin/termucoin.git
+    git clone https://github.com/nerocash/nerocash.git
 
-### Termucoin maintainers/release engineers, update version in sources
+### Nerocash maintainers/release engineers, update version in sources
 
 Update the following:
 
@@ -77,7 +77,7 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 
 Setup Gitian descriptors:
 
-    pushd ./termucoin
+    pushd ./nerocash
     export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
     export VERSION=(new version, e.g. 0.8.0)
     git fetch
@@ -111,7 +111,7 @@ Create the OS X SDK tarball, see the [OS X readme](README_osx.md) for details, a
 By default, Gitian will fetch source files as needed. To cache them ahead of time:
 
     pushd ./gitian-builder
-    make -C ../termucoin/depends download SOURCES_PATH=`pwd`/cache/common
+    make -C ../nerocash/depends download SOURCES_PATH=`pwd`/cache/common
     popd
 
 Only missing files will be fetched, so this is safe to re-run for each build.
@@ -119,50 +119,50 @@ Only missing files will be fetched, so this is safe to re-run for each build.
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 
     pushd ./gitian-builder
-    ./bin/gbuild --url termucoin=/path/to/termucoin,signature=/path/to/sigs {rest of arguments}
+    ./bin/gbuild --url nerocash=/path/to/nerocash,signature=/path/to/sigs {rest of arguments}
     popd
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign Termucoin Core for Linux, Windows, and OS X:
+### Build and sign Nerocash Core for Linux, Windows, and OS X:
 
     pushd ./gitian-builder
-    ./bin/gbuild --memory 3000 --commit termucoin=v${VERSION} ../termucoin/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../termucoin/contrib/gitian-descriptors/gitian-linux.yml
-    mv build/out/termucoin-*.tar.gz build/out/src/termucoin-*.tar.gz ../
+    ./bin/gbuild --memory 3000 --commit nerocash=v${VERSION} ../nerocash/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../nerocash/contrib/gitian-descriptors/gitian-linux.yml
+    mv build/out/nerocash-*.tar.gz build/out/src/nerocash-*.tar.gz ../
 
-    ./bin/gbuild --memory 3000 --commit termucoin=v${VERSION} ../termucoin/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../termucoin/contrib/gitian-descriptors/gitian-win.yml
-    mv build/out/termucoin-*-win-unsigned.tar.gz inputs/termucoin-win-unsigned.tar.gz
-    mv build/out/termucoin-*.zip build/out/termucoin-*.exe ../
+    ./bin/gbuild --memory 3000 --commit nerocash=v${VERSION} ../nerocash/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../nerocash/contrib/gitian-descriptors/gitian-win.yml
+    mv build/out/nerocash-*-win-unsigned.tar.gz inputs/nerocash-win-unsigned.tar.gz
+    mv build/out/nerocash-*.zip build/out/nerocash-*.exe ../
 
-    ./bin/gbuild --memory 3000 --commit termucoin=v${VERSION} ../termucoin/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../termucoin/contrib/gitian-descriptors/gitian-osx.yml
-    mv build/out/termucoin-*-osx-unsigned.tar.gz inputs/termucoin-osx-unsigned.tar.gz
-    mv build/out/termucoin-*.tar.gz build/out/termucoin-*.dmg ../
+    ./bin/gbuild --memory 3000 --commit nerocash=v${VERSION} ../nerocash/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../nerocash/contrib/gitian-descriptors/gitian-osx.yml
+    mv build/out/nerocash-*-osx-unsigned.tar.gz inputs/nerocash-osx-unsigned.tar.gz
+    mv build/out/nerocash-*.tar.gz build/out/nerocash-*.dmg ../
     popd
 
 Build output expected:
 
-  1. source tarball (`termucoin-${VERSION}.tar.gz`)
-  2. linux 32-bit and 64-bit dist tarballs (`termucoin-${VERSION}-linux[32|64].tar.gz`)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (`termucoin-${VERSION}-win[32|64]-setup-unsigned.exe`, `termucoin-${VERSION}-win[32|64].zip`)
-  4. OS X unsigned installer and dist tarball (`termucoin-${VERSION}-osx-unsigned.dmg`, `termucoin-${VERSION}-osx64.tar.gz`)
+  1. source tarball (`nerocash-${VERSION}.tar.gz`)
+  2. linux 32-bit and 64-bit dist tarballs (`nerocash-${VERSION}-linux[32|64].tar.gz`)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (`nerocash-${VERSION}-win[32|64]-setup-unsigned.exe`, `nerocash-${VERSION}-win[32|64].zip`)
+  4. OS X unsigned installer and dist tarball (`nerocash-${VERSION}-osx-unsigned.dmg`, `nerocash-${VERSION}-osx64.tar.gz`)
   5. Gitian signatures (in `gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
 Add other gitian builders keys to your gpg keyring, and/or refresh keys.
 
-    gpg --import termucoin/contrib/gitian-keys/*.pgp
+    gpg --import nerocash/contrib/gitian-keys/*.pgp
     gpg --refresh-keys
 
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../termucoin/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../termucoin/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../termucoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../nerocash/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../nerocash/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../nerocash/contrib/gitian-descriptors/gitian-osx.yml
     popd
 
 ### Next steps:
@@ -180,25 +180,25 @@ Commit your signature to gitian.sigs:
 Wait for Windows/OS X detached signatures:
 
 - Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [termucoin-detached-sigs](https://github.com/TERM/termucoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [nerocash-detached-sigs](https://github.com/TERM/nerocash-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed OS X binary:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../termucoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../termucoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../termucoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    mv build/out/termucoin-osx-signed.dmg ../termucoin-${VERSION}-osx.dmg
+    ./bin/gbuild -i --commit signature=v${VERSION} ../nerocash/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../nerocash/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../nerocash/contrib/gitian-descriptors/gitian-osx-signer.yml
+    mv build/out/nerocash-osx-signed.dmg ../nerocash-${VERSION}-osx.dmg
     popd
 
 Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../termucoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../termucoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../termucoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    mv build/out/termucoin-*win64-setup.exe ../termucoin-${VERSION}-win64-setup.exe
-    mv build/out/termucoin-*win32-setup.exe ../termucoin-${VERSION}-win32-setup.exe
+    ./bin/gbuild -i --commit signature=v${VERSION} ../nerocash/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../nerocash/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../nerocash/contrib/gitian-descriptors/gitian-win-signer.yml
+    mv build/out/nerocash-*win64-setup.exe ../nerocash-${VERSION}-win64-setup.exe
+    mv build/out/nerocash-*win32-setup.exe ../nerocash-${VERSION}-win32-setup.exe
     popd
 
 Commit your signature for the signed OS X/Windows binaries:
@@ -220,23 +220,23 @@ sha256sum * > SHA256SUMS
 
 The list of files should be:
 ```
-termucoin-${VERSION}-aarch64-linux-gnu.tar.gz
-termucoin-${VERSION}-arm-linux-gnueabihf.tar.gz
-termucoin-${VERSION}-i686-pc-linux-gnu.tar.gz
-termucoin-${VERSION}-x86_64-linux-gnu.tar.gz
-termucoin-${VERSION}-osx64.tar.gz
-termucoin-${VERSION}-osx.dmg
-termucoin-${VERSION}.tar.gz
-termucoin-${VERSION}-win32-setup.exe
-termucoin-${VERSION}-win32.zip
-termucoin-${VERSION}-win64-setup.exe
-termucoin-${VERSION}-win64.zip
+nerocash-${VERSION}-aarch64-linux-gnu.tar.gz
+nerocash-${VERSION}-arm-linux-gnueabihf.tar.gz
+nerocash-${VERSION}-i686-pc-linux-gnu.tar.gz
+nerocash-${VERSION}-x86_64-linux-gnu.tar.gz
+nerocash-${VERSION}-osx64.tar.gz
+nerocash-${VERSION}-osx.dmg
+nerocash-${VERSION}.tar.gz
+nerocash-${VERSION}-win32-setup.exe
+nerocash-${VERSION}-win32.zip
+nerocash-${VERSION}-win64-setup.exe
+nerocash-${VERSION}-win64.zip
 ```
 The `*-debug*` files generated by the gitian build contain debug symbols
 for troubleshooting by developers. It is assumed that anyone that is interested
 in debugging can run gitian to generate the files for themselves. To avoid
 end-user confusion about which file to pick, as well as save storage
-space *do not upload these to the termucoin.com server, nor put them in the torrent*.
+space *do not upload these to the nerocash.com server, nor put them in the torrent*.
 
 - GPG-sign it, delete the unsigned file:
 ```
@@ -246,23 +246,23 @@ rm SHA256SUMS
 (the digest algorithm is forced to sha256 to avoid confusion of the `Hash:` header that GPG adds with the SHA256 used for the files)
 Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spurious/nonsensical entry.
 
-- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the termucoin.com Github repo
+- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the nerocash.com Github repo
 
-- Create a [new GitHub release](https://github.com/termucoin/termucoin/releases/new) with a link to the archived release notes.
+- Create a [new GitHub release](https://github.com/nerocash/nerocash/releases/new) with a link to the archived release notes.
 
-- Update termucoin.com version - Langerhans to do
+- Update nerocash.com version - Langerhans to do
 
 - Announce the release:
 
-  - Release sticky on Termucoin Forums: http://forum.termucoin.com/forum/news-community/community-announcements
+  - Release sticky on Nerocash Forums: http://forum.nerocash.com/forum/news-community/community-announcements
 
-  - Termucoin-development mailing list
+  - Nerocash-development mailing list
 
-  - Twitter, reddit /r/termucoin
+  - Twitter, reddit /r/nerocash
 
-  - Update title of #termucoin on Freenode IRC
+  - Update title of #nerocash on Freenode IRC
 
-  - Announce on reddit /r/termucoin, /r/termucoindev
+  - Announce on reddit /r/nerocash, /r/nerocashdev
 
 - Add release notes for the new version to the directory `doc/release-notes` in git master
 

@@ -5,10 +5,10 @@ of the latest changes on NixOS.
 
 Clone and enter the repo:
 
-    $ git clone https://github.com/termucoin/termucoin
-    $ cd termucoin
+    $ git clone https://github.com/nerocash/nerocash
+    $ cd nerocash
 
-Enter the `nix-shell` environment with all the Termucoin dependencies present:
+Enter the `nix-shell` environment with all the Nerocash dependencies present:
 
     $ nix-shell ./contrib/nixos/shell.nix
 
@@ -20,4 +20,4 @@ Run the build steps with flags necessary for NixOS:
 
 Start the GUI!
 
-    $ ./src/qt/termucoin-qt
+    $ ./src/qt/nerocash-qt

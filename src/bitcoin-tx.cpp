@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2026 The Termucoin Core developers
+// Copyright (c) 2026 The Nerocash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -57,10 +57,10 @@ static int AppInitRawTx(int argc, char* argv[])
     if (argc<2 || IsArgSet("-?") || IsArgSet("-h") || IsArgSet("-help"))
     {
         // First part of help message is specific to this utility
-        std::string strUsage = strprintf(_("%s termucoin-tx utility version"), _(PACKAGE_NAME)) + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = strprintf(_("%s nerocash-tx utility version"), _(PACKAGE_NAME)) + " " + FormatFullVersion() + "\n\n" +
             _("Usage:") + "\n" +
-              "  termucoin-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded termucoin transaction") + "\n" +
-              "  termucoin-tx [options] -create [commands]   " + _("Create hex-encoded termucoin transaction") + "\n" +
+              "  nerocash-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded nerocash transaction") + "\n" +
+              "  nerocash-tx [options] -create [commands]   " + _("Create hex-encoded nerocash transaction") + "\n" +
               "\n";
 
         fprintf(stdout, "%s", strUsage.c_str());

@@ -1,6 +1,0 @@
-usr/local/bin/termucoin-qt usr/bin
-share/pixmaps/termucoin32.xpm usr/share/pixmaps
-share/pixmaps/termucoin16.xpm usr/share/pixmaps
-share/pixmaps/termucoin128.png usr/share/pixmaps
-debian/termucoin-qt.desktop usr/share/applications
-debian/termucoin-qt.protocol usr/share/kde4/services/

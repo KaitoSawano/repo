@@ -99,12 +99,12 @@
         <translation>Vastuvõtvad aadressid</translation>
     </message>
     <message>
-        <source>These are your Termucoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Need on sinu Termucoin aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
+        <source>These are your Nerocash addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Need on sinu Nerocash aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
     </message>
     <message>
-        <source>These are your Termucoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Need on sinu Termucoin aadressid sisenevate maksete vastu võtmiseks. Soovitav on iga tehingu tarbeks kasutada uut aadressi.</translation>
+        <source>These are your Nerocash addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Need on sinu Nerocash aadressid sisenevate maksete vastu võtmiseks. Soovitav on iga tehingu tarbeks kasutada uut aadressi.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -205,8 +205,8 @@
         <translation>Kinnita rahakoti krüpteerimine.</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR TERMUCOINS&lt;/b&gt;!</source>
-        <translation>Hoiatus:Kui sa krüpteerid oma rahakoti ja kaotad salafraasi, siis sa&lt;b&gt;KAOTAD OMA TERMUCOINID&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR NEROCASHS&lt;/b&gt;!</source>
+        <translation>Hoiatus:Kui sa krüpteerid oma rahakoti ja kaotad salafraasi, siis sa&lt;b&gt;KAOTAD OMA NEROCASHID&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -249,7 +249,7 @@
         <translation>Hoiatus:Klaviatuuri suurtähelukk on peal.</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your termucoins from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your nerocashs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -339,8 +339,8 @@
         <translation>Kettal olevate blokkide re-indekseerimine...</translation>
     </message>
     <message>
-        <source>Send coins to a Termucoin address</source>
-        <translation>Saada münte Termucoini aadressile</translation>
+        <source>Send coins to a Nerocash address</source>
+        <translation>Saada münte Nerocashi aadressile</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -363,8 +363,8 @@
         <translation>&amp;Kontrolli sõnumit...</translation>
     </message>
     <message>
-        <source>Termucoin</source>
-        <translation>Termucoin</translation>
+        <source>Nerocash</source>
+        <translation>Nerocash</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -391,12 +391,12 @@
         <translation>Krüpteeri oma rahakoti privaatvõtmed</translation>
     </message>
     <message>
-        <source>Sign messages with your Termucoin addresses to prove you own them</source>
-        <translation>Omandi tõestamiseks allkirjasta sõnumid oma Termucoini aadressiga</translation>
+        <source>Sign messages with your Nerocash addresses to prove you own them</source>
+        <translation>Omandi tõestamiseks allkirjasta sõnumid oma Nerocashi aadressiga</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Termucoin addresses</source>
-        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud Termucoini aadressiga</translation>
+        <source>Verify messages to ensure they were signed with specified Nerocash addresses</source>
+        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud Nerocashi aadressiga</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -415,22 +415,22 @@
         <translation>Vahelehe tööriistariba</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and termucoin: URIs)</source>
-        <translation>Loo maksepäring (genereerib QR koodid ja termucoini: URId)</translation>
+        <source>Request payments (generates QR codes and nerocash: URIs)</source>
+        <translation>Loo maksepäring (genereerib QR koodid ja nerocashi: URId)</translation>
     </message>
     <message>
-        <source>Open a termucoin: URI or payment request</source>
-        <translation>Ava termucoini: URI või maksepäring</translation>
+        <source>Open a nerocash: URI or payment request</source>
+        <translation>Ava nerocashi: URI või maksepäring</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Käsurea valikud</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Termucoin network</source>
+        <source>%n active connection(s) to Nerocash network</source>
         <translation>
-            <numerusform>%n aktiivne ühendus Termucoini võrku</numerusform>
-            <numerusform>%n aktiivset ühendust Termucoini võrku</numerusform>
+            <numerusform>%n aktiivne ühendus Nerocashi võrku</numerusform>
+            <numerusform>%n aktiivset ühendust Nerocashi võrku</numerusform>
         </translation>
     </message>
     <message>
@@ -571,11 +571,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Import a Termucoin private key</source>
+        <source>Import a Nerocash private key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Termucoin command-line options</source>
+        <source>Show the %1 help message to get a list with possible Nerocash command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -611,7 +611,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A fatal error occurred. Termucoin can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. Nerocash can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -797,8 +797,8 @@
         <translation>Muuda saatvat aadressi</translation>
     </message>
     <message>
-        <source>The entered address &quot;%1&quot; is not a valid Termucoin address.</source>
-        <translation>Sisestatud aadress &quot;%1&quot; ei ole korrektne Termucoin aadress.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Nerocash address.</source>
+        <translation>Sisestatud aadress &quot;%1&quot; ei ole korrektne Nerocash aadress.</translation>
     </message>
     <message>
         <source>The entered address &quot;%1&quot; is already in the address book.</source>
@@ -981,7 +981,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Termucoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>%1 will download and store a copy of the Nerocash block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1030,11 +1030,11 @@
         <translation>Peida</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the termucoin network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the nerocash network, as detailed below.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Attempting to spend termucoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend nerocashs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1124,8 +1124,8 @@
         <translation>Ekspert</translation>
     </message>
     <message>
-        <source>Automatically open the Termucoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Termucoini kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
+        <source>Automatically open the Nerocash client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Nerocashi kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1276,7 +1276,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Connect to the Termucoin network through a SOCKS5 proxy.</source>
+        <source>Connect to the Nerocash network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1296,7 +1296,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Connect to the Termucoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the Nerocash network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1347,7 +1347,7 @@
         <translation>Vorm</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Termucoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Nerocash network after a connection is established, but this process has not completed yet.</source>
         <translation>Kuvatav info ei pruugi olla ajakohane. Ühenduse loomisel süngitakse sinu rahakott automaatselt Bitconi võrgustikuga, kuid see toiming on hetkel lõpetamata.</translation>
     </message>
     <message>
@@ -1455,11 +1455,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>To see ongoing development and contribute, check out the Termucoin Core repository on GitHub</source>
+        <source>To see ongoing development and contribute, check out the Nerocash Core repository on GitHub</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Services that claim to double your termucoins are always ponzi schemes</source>
+        <source>Services that claim to double your nerocashs are always ponzi schemes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1657,7 +1657,7 @@ p, li { white-space: pre-wrap; }
         <translation>Kinnitamata maksepäringud kohandatud makse scriptidele ei ole toetatud.</translation>
     </message>
     <message>
-        <source>Cannot start termucoin: click-to-pay handler</source>
+        <source>Cannot start nerocash: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1673,7 +1673,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Termucoin address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Nerocash address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1846,7 +1846,7 @@ Use this functionality with extreme caution.</source>
         </translation>
     </message>
     <message>
-        <source>Enter a Termucoin address (e.g. %1)</source>
+        <source>Enter a Nerocash address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2316,7 +2316,7 @@ Use this functionality with extreme caution.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Termucoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Nerocash network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2589,8 +2589,8 @@ Use this functionality with extreme caution.</source>
         <translation>Maksepäring aegunud.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Termucoin address</source>
-        <translation>Hoiatus: Ebakorrektne Termucoin aadress</translation>
+        <source>Warning: Invalid Nerocash address</source>
+        <translation>Hoiatus: Ebakorrektne Nerocash aadress</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -2629,7 +2629,7 @@ Use this functionality with extreme caution.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for termucoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for nerocash transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2764,7 +2764,7 @@ Use this functionality with extreme caution.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The Termucoin address to send the payment to</source>
+        <source>The Nerocash address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2776,11 +2776,11 @@ Use this functionality with extreme caution.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less termucoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less nerocashs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A message that was attached to the termucoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Termucoin network.</source>
+        <source>A message that was attached to the nerocash: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nerocash network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2829,8 +2829,8 @@ Use this functionality with extreme caution.</source>
         <translation>&amp;Allkirjastamise teade</translation>
     </message>
     <message>
-        <source>The Termucoin address to sign the message with</source>
-        <translation>Termucoin aadress millega sõnum allkirjastada</translation>
+        <source>The Nerocash address to sign the message with</source>
+        <translation>Nerocash aadress millega sõnum allkirjastada</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2861,8 +2861,8 @@ Use this functionality with extreme caution.</source>
         <translation>Kopeeri praegune signatuur vahemällu</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Termucoin address</source>
-        <translation>Allkirjasta sõnum Termucoini aadressi sulle kuulumise tõestamiseks</translation>
+        <source>Sign the message to prove you own this Nerocash address</source>
+        <translation>Allkirjasta sõnum Nerocashi aadressi sulle kuulumise tõestamiseks</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2881,12 +2881,12 @@ Use this functionality with extreme caution.</source>
         <translation>&amp;Kinnita Sõnum</translation>
     </message>
     <message>
-        <source>The Termucoin address the message was signed with</source>
-        <translation>Termucoin aadress millega sõnum on allkirjastatud</translation>
+        <source>The Nerocash address the message was signed with</source>
+        <translation>Nerocash aadress millega sõnum on allkirjastatud</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Termucoin address</source>
-        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Termucoini aadressiga.</translation>
+        <source>Verify the message to ensure it was signed with the specified Nerocash address</source>
+        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Nerocashi aadressiga.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2945,7 +2945,7 @@ Use this functionality with extreme caution.</source>
         <translation>Sõnum verifitseeritud.</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive termucoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive nerocashs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3538,8 +3538,8 @@ Use this functionality with extreme caution.</source>
         <translation>Tööta taustal ning aktsepteeri käsklusi</translation>
     </message>
     <message>
-        <source>Termucoin Core</source>
-        <translation>Termucoini tuumik</translation>
+        <source>Nerocash Core</source>
+        <translation>Nerocashi tuumik</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
@@ -3710,7 +3710,7 @@ Use this functionality with extreme caution.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Bitcoin Core and Termucoin Core</source>
+        <source>Bitcoin Core and Nerocash Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

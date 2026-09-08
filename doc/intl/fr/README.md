@@ -1,40 +1,40 @@
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/termucoin/termucoin/master/share/pixmaps/termucoin256.svg" alt="Termucoin" width="256"/>
+<img src="https://raw.githubusercontent.com/nerocash/nerocash/master/share/pixmaps/nerocash256.svg" alt="Nerocash" width="256"/>
 <br/><br/>
-Termucoin Core [TERM, ]  
+Nerocash Core [TERM, ]  
 </h1>
 
 **IMPORTANT : À partir d'août 2024, la branche `master` est devenue la branche principale d'intégration et est devenue instable. Veuillez consulter une version _taguée_ avant de compiler des binaires de production.**
 
-Termucoin est une crypto-monnaie communautaire qui s'inspire d'un mème de  . Le logiciel Termucoin Core permet à quiconque d'exploiter un nœud dans les réseaux de la blockchain Termucoin et utilise la méthode de hachage Scrypt pour la preuve de travail. Il est adapté de Bitcoin Core et d'autres crypto-monnaies.
+Nerocash est une crypto-monnaie communautaire qui s'inspire d'un mème de  . Le logiciel Nerocash Core permet à quiconque d'exploiter un nœud dans les réseaux de la blockchain Nerocash et utilise la méthode de hachage Scrypt pour la preuve de travail. Il est adapté de Bitcoin Core et d'autres crypto-monnaies.
 
-Pour plus d'informations sur les frais par défaut utilisés sur le réseau Termucoin, veuillez consulter la [recommandation sur les frais](doc/fee-recommendation.md).
+Pour plus d'informations sur les frais par défaut utilisés sur le réseau Nerocash, veuillez consulter la [recommandation sur les frais](doc/fee-recommendation.md).
 
 ## Utilisation 💻
 
-Pour commencer votre voyage avec Termucoin Core, consultez le [guide d'installation](INSTALL.md) et le [tutoriel de démarrage](doc/getting-started.md).
+Pour commencer votre voyage avec Nerocash Core, consultez le [guide d'installation](INSTALL.md) et le [tutoriel de démarrage](doc/getting-started.md).
 
-L'API JSON-RPC fournie par Termucoin Core est auto-documentée et peut être parcourue avec `termucoin-cli help`, tandis que des informations détaillées pour chaque commande peuvent être visualisées avec `termucoin-cli help <command>`.
+L'API JSON-RPC fournie par Nerocash Core est auto-documentée et peut être parcourue avec `nerocash-cli help`, tandis que des informations détaillées pour chaque commande peuvent être visualisées avec `nerocash-cli help <command>`.
 
 ### Les ports
 
-Termucoin Core utilise par défaut le port `8599` pour la communication pair-à-pair qui est nécessaire pour synchroniser la blockchain au "mainnet" et rester informé des nouvelles transactions et blocs. De plus, un port JSONRPC peut être ouvert, dont par défaut le port `8598` est utilisé pour les nœuds du réseau principal. Il est fortement recommandé de ne pas exposer les ports RPC à l'Internet public.
+Nerocash Core utilise par défaut le port `9883` pour la communication pair-à-pair qui est nécessaire pour synchroniser la blockchain au "mainnet" et rester informé des nouvelles transactions et blocs. De plus, un port JSONRPC peut être ouvert, dont par défaut le port `9882` est utilisé pour les nœuds du réseau principal. Il est fortement recommandé de ne pas exposer les ports RPC à l'Internet public.
 
 | Function | mainnet | testnet | regtest |
 | :------- | ------: | ------: | ------: |
-| P2P      |   8599 |   12253 |   8433 |
-| RPC      |   8598 |   12252 |   8432 |
+| P2P      |   9883 |   12253 |   8433 |
+| RPC      |   9882 |   12252 |   8432 |
 
 ## Développement continu - Moon plan 🌒
 
-Termucoin Core est un logiciel libre et communautaire. Le processus de développement est ouvert et publiquement visible; tout le monde peut voir, discuter et travailler sur le logiciel.
+Nerocash Core est un logiciel libre et communautaire. Le processus de développement est ouvert et publiquement visible; tout le monde peut voir, discuter et travailler sur le logiciel.
 
 Principales ressources de développement :
 
-* [GitHub Projects](https://github.com/termucoin/termucoin/projects) est utilisé pour
+* [GitHub Projects](https://github.com/nerocash/nerocash/projects) est utilisé pour
   suivre les travaux prévus et en cours pour les prochaines versions.
-* [GitHub Discussion](https://github.com/termucoin/termucoin/discussions) est utilisé pour
-  discuter des caractéristiques, planifiées et non planifiées, liées à la fois au développement du logiciel Termucoin Core, les protocoles sous-jacents et l'actif TERM.
+* [GitHub Discussion](https://github.com/nerocash/nerocash/discussions) est utilisé pour
+  discuter des caractéristiques, planifiées et non planifiées, liées à la fois au développement du logiciel Nerocash Core, les protocoles sous-jacents et l'actif TERM.
 
 ### Stratégie de version
 
@@ -55,20 +55,20 @@ Il y a 4 types de branches dans ce répertoire :
 
 ## Contribution🤝
 
-Si vous trouvez un bug ou rencontrez des problèmes avec ce logiciel, veuillez le signaler en utilisant le [système de gestion des problèmes](https://github.com/termucoin/termucoin/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5Bbug%5D+).
+Si vous trouvez un bug ou rencontrez des problèmes avec ce logiciel, veuillez le signaler en utilisant le [système de gestion des problèmes](https://github.com/nerocash/nerocash/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5Bbug%5D+).
 
 Veuillez consulter [le guide de contribution](CONTRIBUTING.md) pour voir comment vous pouvez
-participer au développement de Termucoin Core. Il y a souvent
-[des sujets demandant de l'aide](https://github.com/termucoin/termucoin/labels/help%20wanted)
+participer au développement de Nerocash Core. Il y a souvent
+[des sujets demandant de l'aide](https://github.com/nerocash/nerocash/labels/help%20wanted)
 où vos contributions auront un impact considérable et seront très appréciées. wow.
 
 ## Questions très fréquemment posées ❓
 
-Vous avez une question concernant le Termucoin ? Une réponse se trouve peut-être déjà dans la
+Vous avez une question concernant le Nerocash ? Une réponse se trouve peut-être déjà dans la
 [FAQ](doc/FAQ.md) ou dans la
-[section Q&R](https://github.com/termucoin/termucoin/discussions/categories/q-a)
+[section Q&R](https://github.com/nerocash/nerocash/discussions/categories/q-a)
 du forum de discussion !
 
 ## License - Much license ⚖️
-Termucoin Core est publié sous les termes de la licence MIT. Voir
+Nerocash Core est publié sous les termes de la licence MIT. Voir
 [COPYING](COPYING) pour plus d'informations.

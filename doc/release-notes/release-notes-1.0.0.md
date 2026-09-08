@@ -1,21 +1,21 @@
-This is a new minor version release that contains important bugfixes. Termucoin
+This is a new minor version release that contains important bugfixes. Nerocash
 users on any platform are strongly recommended to upgrade.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/termucoin/termucoin/issues>
+  <https://github.com/nerocash/nerocash/issues>
 
 Compatibility
 ==============
 
-Termucoin Core is extensively tested on Ubuntu Server LTS, macOS and Windows.
+Nerocash Core is extensively tested on Ubuntu Server LTS, macOS and Windows.
 Minimum OS compatibility can be found [in the INSTALL guide](../INSTALL.md).
 
 Notable changes
 ================
 
 Important updates have been added that solve upstream bugs from Bitcoin Core
-and Namecoin Core that were inherited by Termucoin Core.
+and Namecoin Core that were inherited by Nerocash Core.
 
 Known Issues
 =============

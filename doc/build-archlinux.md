@@ -5,12 +5,12 @@ Arch Linux build guide
 **Test date:** 2022/07/15
 
 This example lists the steps necessary to setup and build a command line only
-termucoind on archlinux:
+nerocashd on archlinux:
 
 ```sh
 pacman -S git base-devel boost libevent python db
-git clone https://github.com/termucoin/termucoin.git
-cd termucoin/
+git clone https://github.com/nerocash/nerocash.git
+cd nerocash/
 ./autogen.sh
 ./configure --without-gui --without-miniupnpc
 make

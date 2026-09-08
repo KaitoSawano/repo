@@ -1,37 +1,37 @@
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/termucoin/termucoin/master/share/pixmaps/termucoin256.svg" alt="Termucoin" width="256"/>
+<img src="https://raw.githubusercontent.com/nerocash/nerocash/master/share/pixmaps/nerocash256.svg" alt="Nerocash" width="256"/>
 <br/><br/>
-Termucoin Core [TERM, ]  
+Nerocash Core [TERM, ]  
 </h1>
 
-Termucoin é uma criptomoeda gerida pela comunidade que foi inspirada no   . O programa Termucoin Core permite qualquer um operar um nó na rede blockchain da Termucoin e utilizar o algoritmo de hash Scrypt para mineração usando Prova de Trabalho (Proof of Work). O Termucoin Core é uma adaptação do Bitcoin Core e de outras criptomoedas.
+Nerocash é uma criptomoeda gerida pela comunidade que foi inspirada no   . O programa Nerocash Core permite qualquer um operar um nó na rede blockchain da Nerocash e utilizar o algoritmo de hash Scrypt para mineração usando Prova de Trabalho (Proof of Work). O Nerocash Core é uma adaptação do Bitcoin Core e de outras criptomoedas.
 
-Para maiores informações acerca das taxas de transação usadas na rede Termucoin, por favor acesse: 
+Para maiores informações acerca das taxas de transação usadas na rede Nerocash, por favor acesse: 
 [taxas recomendadas](doc/fee-recommendation.md).
 
 ## Uso 💻
 
-Para começar a sua jornada com o Termucoin Core, veja o [manual de instalação](INSTALL.md) e o [guia para iniciantes](doc/getting-started.md).
+Para começar a sua jornada com o Nerocash Core, veja o [manual de instalação](INSTALL.md) e o [guia para iniciantes](doc/getting-started.md).
 
-A API JSON-RPC fornecida pelo Termucoin Core é auto documentada e pode ser buscada pelo comando `termucoin-cli help`, informações mais detalhadas sobre cada comando podem ser encontradas usando `termucoin-cli help <command>`.
+A API JSON-RPC fornecida pelo Nerocash Core é auto documentada e pode ser buscada pelo comando `nerocash-cli help`, informações mais detalhadas sobre cada comando podem ser encontradas usando `nerocash-cli help <command>`.
 
 ### Quais as portas
 
-A Termucoin Core utiliza por padrão a porta `8599` para comunicação par-a-par, que é necessária para sincronizar a blockchain da "rede principal" e se manter informada de novas transações e blocos. Outrosim, uma porta JSONRPC pode ser aberta, que por padrão é a porta `8598` para nós da rede principal. Recomendamos fortemente não expor portas RPC para a internet pública. 
+A Nerocash Core utiliza por padrão a porta `9883` para comunicação par-a-par, que é necessária para sincronizar a blockchain da "rede principal" e se manter informada de novas transações e blocos. Outrosim, uma porta JSONRPC pode ser aberta, que por padrão é a porta `9882` para nós da rede principal. Recomendamos fortemente não expor portas RPC para a internet pública. 
 
 |  Função  | mainnet | testnet | regtest |
 | :------- | ------: | ------: | ------: |
-| P2P      |   8599 |   12253 |   8433 |
-| RPC      |   8598 |   12252 |   8432 |
+| P2P      |   9883 |   12253 |   8433 |
+| RPC      |   9882 |   12252 |   8432 |
 
 ## Desenvolvimento continuo - Plano Lua 🌒
 
-A Termucoin Core é um programa de código aberto gerido pela comunidade. O processo de desenvolvimento é aberto e visivel publicamente; qualquer um pode ver, discutir e trabalhar no programa.
+A Nerocash Core é um programa de código aberto gerido pela comunidade. O processo de desenvolvimento é aberto e visivel publicamente; qualquer um pode ver, discutir e trabalhar no programa.
 
 Recursos principais de Desenvolvimento:
 
-* [Projetos do Github](https://github.com/termucoin/termucoin/projects) é utilizado para conduzir trabalhos planejados ou que estejam em desenvolvimento para as próximas atualizações.
-* [Discussão do Github](https://github.com/termucoin/termucoin/discussions) é usado para discutir sobre funcionalidades, planejadas ou não, relacionadas ao desenvolvimento do programa Termucoin Core, os protocolos adjacentes e o criptoativo TERM.
+* [Projetos do Github](https://github.com/nerocash/nerocash/projects) é utilizado para conduzir trabalhos planejados ou que estejam em desenvolvimento para as próximas atualizações.
+* [Discussão do Github](https://github.com/nerocash/nerocash/discussions) é usado para discutir sobre funcionalidades, planejadas ou não, relacionadas ao desenvolvimento do programa Nerocash Core, os protocolos adjacentes e o criptoativo TERM.
 
 ### Estratégia das Versões
 Os numeros de compilação seguem a seguinte semantica:  ```major.minor.patch```
@@ -50,19 +50,19 @@ Este repositório possui 3 principais ramificações (branchs), são essas:
 
 ## Contribuindo 🤝
 
-Se você achar um bug ou passar por alguma experiência incomum com este programa, por favor reporte o ocorrido usado o [sistema de problemas (issues)](https://github.com/termucoin/termucoin/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5Bbug%5D+).
+Se você achar um bug ou passar por alguma experiência incomum com este programa, por favor reporte o ocorrido usado o [sistema de problemas (issues)](https://github.com/nerocash/nerocash/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5Bbug%5D+).
 
 Por favor, acesse o [guia de contribuições](CONTRIBUTING.md) para ver como você pode participar
-do desenvolvimento do Termucoin Core. Existem alguns [pedidos de ajuda](https://github.com/termucoin/termucoin/labels/help%20wanted)
+do desenvolvimento do Nerocash Core. Existem alguns [pedidos de ajuda](https://github.com/nerocash/nerocash/labels/help%20wanted)
 onde os contribuintes terão grande importância e apreço. wow.
 
 ## Perguntas frequentes ❓
 
-Você possui alguma questão relacionada à Termucoin? Talvez uma resposta já esteja disponivel no
+Você possui alguma questão relacionada à Nerocash? Talvez uma resposta já esteja disponivel no
 [FAQ](doc/FAQ.md) ou na
-[seção Q&A](https://github.com/termucoin/termucoin/discussions/categories/q-a)
+[seção Q&A](https://github.com/nerocash/nerocash/discussions/categories/q-a)
 do nosso quadro de discussão!
 
 ## Licenças ⚖️
-Termucoin Core é disponibilizada sob os termos de uso da licença MIT. Veja,
+Nerocash Core é disponibilizada sob os termos de uso da licença MIT. Veja,
 [COPYING](COPYING) para mais informações.

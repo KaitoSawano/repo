@@ -7,19 +7,19 @@ define(_CLIENT_VERSION_BUILD, 0)
 define(_CLIENT_VERSION_IS_RELEASE, false)
 define(_COPYRIGHT_YEAR, 2026)
 define(_COPYRIGHT_HOLDERS,[The %s developers])
-define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Bitcoin Core and Termucoin Core]])
+define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Bitcoin Core and Nerocash Core]])
 define(_CURRENT_RELEASE_DATE,[[2026-07-11]])
 define(_EXPECTED_DAYS_TO_NEXT_RELEASE,[270])
-AC_INIT([Termucoin Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/termucoin/termucoin/issues],[termucoin],[https://termucoin.com/])
+AC_INIT([Nerocash Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/nerocash/nerocash/issues],[nerocash],[https://nerocash.com/])
 AC_CONFIG_SRCDIR([src/validation.cpp])
 AC_CONFIG_HEADERS([src/config/bitcoin-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
-BITCOIN_DAEMON_NAME=termucoind
-BITCOIN_GUI_NAME=termucoin-qt
-BITCOIN_CLI_NAME=termucoin-cli
-BITCOIN_TX_NAME=termucoin-tx
+BITCOIN_DAEMON_NAME=nerocashd
+BITCOIN_GUI_NAME=nerocash-qt
+BITCOIN_CLI_NAME=nerocash-cli
+BITCOIN_TX_NAME=nerocash-tx
 
 AC_CANONICAL_HOST
 
@@ -842,17 +842,17 @@ fi
 
 # Configure experimental for compile-time asserts
 if test x$allow_experimental = xyes; then
-  AC_DEFINE(ALLOW_TERMUCOIN_EXPERIMENTAL, 1, [Define this symbol if experimental features are allowed])
+  AC_DEFINE(ALLOW_NEROCASH_EXPERIMENTAL, 1, [Define this symbol if experimental features are allowed])
 fi
 
 # Configure Scrypt SSE2
 if test x$use_scrypt_sse2 = xyes; then
-  TERMUCOIN_REQUIRE_EXPERIMENTAL
+  NEROCASH_REQUIRE_EXPERIMENTAL
   AC_DEFINE(USE_SSE2, 1, [Define this symbol if SSE2 works])
 fi
 
 if test x$armv8_crypto = xyes; then
-  TERMUCOIN_REQUIRE_EXPERIMENTAL
+  NEROCASH_REQUIRE_EXPERIMENTAL
   AC_MSG_CHECKING([whether to build with armv8 crypto])
   AC_MSG_RESULT(yes)
   AC_DEFINE(USE_ARMV8, 1, [Define this symbol if armv8 crypto works])
@@ -860,7 +860,7 @@ if test x$armv8_crypto = xyes; then
 fi
 
 if test x$armv82_crypto = xyes; then
-  TERMUCOIN_REQUIRE_EXPERIMENTAL
+  NEROCASH_REQUIRE_EXPERIMENTAL
   AC_CHECK_DECLS([vsha512su0q_u64],
      [AC_DEFINE(USE_ARMV82, 1, [Define this symbol if armv8.2 crypto works])
      CXXFLAGS="$CXXFLAGS -march=armv8.2-a+crypto+sha3"], AC_MSG_ERROR(sha512 missing), [#include <arm_neon.h>])
@@ -939,7 +939,7 @@ else
 fi
 
 if test x$intel_avx2 = xyes; then
-  TERMUCOIN_REQUIRE_EXPERIMENTAL
+  NEROCASH_REQUIRE_EXPERIMENTAL
   case $host in
      x86_64-*-linux*)
     AC_CHECK_LIB([IPSec_MB],[sha1_one_block_avx2],LIBS=-lIPSec_MB, AC_MSG_ERROR(IPSec_MB missing))
@@ -1036,11 +1036,11 @@ AM_CONDITIONAL([EMBEDDED_UNIVALUE],[test x$need_bundled_univalue = xyes])
 AC_SUBST(UNIVALUE_CFLAGS)
 AC_SUBST(UNIVALUE_LIBS)
 
-AC_MSG_CHECKING([whether to build termucoind])
+AC_MSG_CHECKING([whether to build nerocashd])
 AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_bitcoind = xyes])
 AC_MSG_RESULT($build_bitcoind)
 
-AC_MSG_CHECKING([whether to build utils (termucoin-cli termucoin-tx)])
+AC_MSG_CHECKING([whether to build utils (nerocash-cli nerocash-tx)])
 AM_CONDITIONAL([BUILD_BITCOIN_UTILS], [test x$build_bitcoin_utils = xyes])
 AC_MSG_RESULT($build_bitcoin_utils)
 
@@ -1141,7 +1141,7 @@ if test x$bitcoin_enable_qt != xno; then
     AC_MSG_WARN("xgettext is required to update qt translations")
   fi
 
-  AC_MSG_CHECKING([whether to build test_termucoin-qt])
+  AC_MSG_CHECKING([whether to build test_nerocash-qt])
   if test x$use_gui_tests$bitcoin_enable_qt_test = xyesyes; then
     AC_MSG_RESULT([yes])
     BUILD_TEST_QT="yes"
@@ -1152,7 +1152,7 @@ fi
 
 AM_CONDITIONAL([ENABLE_ZMQ], [test "x$use_zmq" = "xyes"])
 
-AC_MSG_CHECKING([whether to build test_termucoin])
+AC_MSG_CHECKING([whether to build test_nerocash])
 if test x$use_tests = xyes; then
   AC_MSG_RESULT([yes])
   BUILD_TEST="yes"

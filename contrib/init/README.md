@@ -1,11 +1,11 @@
 Sample configuration files for:
 
-SystemD: termucoind.service
-Upstart: termucoind.conf
-OpenRC:  termucoind.openrc
-         termucoind.openrcconf
-CentOS:  termucoind.init
-OS X:    org.termucoin.termucoind.plist
+SystemD: nerocashd.service
+Upstart: nerocashd.conf
+OpenRC:  nerocashd.openrc
+         nerocashd.openrcconf
+CentOS:  nerocashd.init
+OS X:    org.nerocash.nerocashd.plist
 
 have been made available to assist packagers in creating node packages here.
 

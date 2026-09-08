@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2026 The Termucoin Core developers
+// Copyright (c) 2026 The Nerocash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,8 +9,8 @@
 #include "base58.h"
 #include "checkpoints.h"
 #include "chain.h"
-#include "termucoin.h"
-#include "termucoin-fees.h"
+#include "nerocash.h"
+#include "nerocash-fees.h"
 #include "fs.h"
 #include "wallet/coincontrol.h"
 #include "consensus/consensus.h"
@@ -62,7 +62,7 @@ CFeeRate CWallet::minTxFee = CFeeRate(DEFAULT_TRANSACTION_MINFEE);
  */
 CFeeRate CWallet::fallbackFee = CFeeRate(DEFAULT_FALLBACK_FEE);
 /**
- * Termucoin: Effective dust limit for the wallet
+ * Nerocash: Effective dust limit for the wallet
  * - Outputs smaller than this get rejected
  * - Change smaller than this gets discarded to fee
  */
@@ -2147,7 +2147,7 @@ static void ApproximateBestSubset(vector<pair<CAmount, pair<const CWalletTx*,uns
     }
 }
 
-// Termucoin: MIN_CHANGE as a function of discardThreshold and minTxFee(1000)
+// Nerocash: MIN_CHANGE as a function of discardThreshold and minTxFee(1000)
 // Makes the wallet change output minimums configurable instead of hardcoded
 // defaults.
 CAmount CWallet::GetMinChange()
@@ -2514,7 +2514,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                     }
 
                     /*
-                     * Termucoin: check all outputs against the discard threshold
+                     * Nerocash: check all outputs against the discard threshold
                      *           to make sure that the wallet's dust policy gets
                      *           followed rather than the current relay rules,
                      *           because the larger network may settle on a
@@ -2701,7 +2701,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                     nFeeNeeded = GetMinimumFee(txNew, nBytes, currentConfirmationTarget, mempool);
                 } else {
                     // Force the fee rate higher
-                    nFeeNeeded = GetTermucoinPriorityFee(txNew, nBytes, nPriority);
+                    nFeeNeeded = GetNerocashPriorityFee(txNew, nBytes, nPriority);
                 }
                 if (coinControl && nFeeNeeded > 0 && coinControl->nMinimumTotalFee > nFeeNeeded) {
                     nFeeNeeded = coinControl->nMinimumTotalFee;
@@ -2742,7 +2742,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                     CAmount additionalFeeNeeded = nFeeNeeded - nFeeRet;
                     vector<CTxOut>::iterator change_position = txNew.vout.begin()+nChangePosInOut;
                     // Only reduce change if remaining amount is still a large enough output.
-                    /* Termucoin: this has been changed from a static MIN_FINAL_CHANGE that
+                    /* Nerocash: this has been changed from a static MIN_FINAL_CHANGE that
                      * followed DEFAULT_DISCARD_THRESHOLD to instead use the configurable
                      * discard threshold.
                      *
@@ -2879,8 +2879,8 @@ bool CWallet::AddAccountingEntry(const CAccountingEntry& acentry, CWalletDB *pwa
 
 CAmount CWallet::GetRequiredFee(const CMutableTransaction& tx, unsigned int nTxBytes)
 {
-    // Termucoin: Add an increased fee for each output that is lower than the discard threshold
-    return std::max(minTxFee.GetFee(nTxBytes) + GetTermucoinDustFee(tx.vout, discardThreshold), ::minRelayTxFeeRate.GetFee(nTxBytes));
+    // Nerocash: Add an increased fee for each output that is lower than the discard threshold
+    return std::max(minTxFee.GetFee(nTxBytes) + GetNerocashDustFee(tx.vout, discardThreshold), ::minRelayTxFeeRate.GetFee(nTxBytes));
 }
 
 CAmount CWallet::GetRequiredFee(unsigned int nTxBytes)
@@ -2905,11 +2905,11 @@ CAmount CWallet::GetMinimumFee(const CMutableTransaction& tx, unsigned int nTxBy
         //if (nFeeNeeded == 0)
         //    nFeeNeeded = fallbackFee.GetFee(nTxBytes);
 
-        // Termucoin: Drop the smart fee estimate, use GetRequiredFee
+        // Nerocash: Drop the smart fee estimate, use GetRequiredFee
         nFeeNeeded = GetRequiredFee(tx, nTxBytes);
     }
     // prevent user from paying a fee below minRelayTxFee or minTxFee
-    // Termucoin: as we're adapting minTxFee to never be higher than
+    // Nerocash: as we're adapting minTxFee to never be higher than
     //           payTxFee unless explicitly set, this should be fine
     nFeeNeeded = std::max(nFeeNeeded, GetRequiredFee(tx, nTxBytes));
 
@@ -2921,20 +2921,20 @@ CAmount CWallet::GetMinimumFee(const CMutableTransaction& tx, unsigned int nTxBy
 }
 
 
-CAmount CWallet::GetTermucoinPriorityFee(const CMutableTransaction& tx, unsigned int nTxBytes, FeeRatePreset nPriority)
+CAmount CWallet::GetNerocashPriorityFee(const CMutableTransaction& tx, unsigned int nTxBytes, FeeRatePreset nPriority)
 {
     // payTxFee is the user-set global for desired feerate
-    return GetTermucoinPriorityFee(tx, nTxBytes, nPriority, payTxFee.GetFee(nTxBytes));
+    return GetNerocashPriorityFee(tx, nTxBytes, nPriority, payTxFee.GetFee(nTxBytes));
 }
-CAmount CWallet::GetTermucoinPriorityFee(const CMutableTransaction& tx, unsigned int nTxBytes, FeeRatePreset nPriority, CAmount targetFee)
+CAmount CWallet::GetNerocashPriorityFee(const CMutableTransaction& tx, unsigned int nTxBytes, FeeRatePreset nPriority, CAmount targetFee)
 {
     CAmount nFeeNeeded = targetFee;
     // User didn't set: use -txconfirmtarget to estimate...
     if (nFeeNeeded == 0) {
-        nFeeNeeded = GetTermucoinFeeRate(nPriority).GetFee(nTxBytes);
+        nFeeNeeded = GetNerocashFeeRate(nPriority).GetFee(nTxBytes);
     }
     // prevent user from paying a fee below minRelayTxFee or minTxFee
-    // Termucoin: as we're adapting minTxFee to never be higher than
+    // Nerocash: as we're adapting minTxFee to never be higher than
     //           payTxFee unless explicitly set, this should be fine
     nFeeNeeded = std::max(nFeeNeeded, GetRequiredFee(tx, nTxBytes));
 

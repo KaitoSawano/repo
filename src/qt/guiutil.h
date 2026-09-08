@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2026 The Termucoin Core developers
+// Copyright (c) 2026 The Nerocash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -50,7 +50,7 @@ namespace GUIUtil
     bool parseBitcoinURI(QString uri, SendCoinsRecipient *out);
     QString formatBitcoinURI(const SendCoinsRecipient &info);
 
-//Termucoin: need wallet to establish dust from a wallet perspective
+//Nerocash: need wallet to establish dust from a wallet perspective
 #ifdef ENABLE_WALLET
     // Returns true if given address+amount meets "dust" definition
     bool isDust(const QString& address, const CAmount& amount);

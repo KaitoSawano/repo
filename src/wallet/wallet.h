@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2026 The Termucoin Core developers
+// Copyright (c) 2026 The Nerocash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,7 +9,7 @@
 
 #include "amount.h"
 #include "auxpow.h"
-#include "termucoin-fees.h"
+#include "nerocash-fees.h"
 #include "streams.h"
 #include "tinyformat.h"
 #include "ui_interface.h"
@@ -61,7 +61,7 @@ static const CAmount DEFAULT_DISCARD_THRESHOLD = COIN / 100000;
 //! minimum recommended increment for BIP 125 replacement txs
 static const CAmount WALLET_INCREMENTAL_RELAY_FEE = RECOMMENDED_MIN_TX_FEE / 5000;
 /*
- * Termucoin: Creating change outputs at exactly the dustlimit is counter-
+ * Nerocash: Creating change outputs at exactly the dustlimit is counter-
  * productive because it leaves no space to bump the fee up, so we make the
  * minimum change higher than the discard threshold.
  *
@@ -796,13 +796,13 @@ public:
      */
     static CAmount GetMinimumFee(const CMutableTransaction& tx, unsigned int nTxBytes, unsigned int nConfirmTarget, const CTxMemPool& pool, CAmount targetFee);
     /**
-     * Termucoin: Get a fee targeting a specific transaction speed.
+     * Nerocash: Get a fee targeting a specific transaction speed.
      */
-    CAmount GetTermucoinPriorityFee(const CMutableTransaction& tx, unsigned int nTxBytes, FeeRatePreset nSpeed);
+    CAmount GetNerocashPriorityFee(const CMutableTransaction& tx, unsigned int nTxBytes, FeeRatePreset nSpeed);
     /**
-     * Termucoin: Get a fee targeting a specific transaction speed.
+     * Nerocash: Get a fee targeting a specific transaction speed.
      */
-    static CAmount GetTermucoinPriorityFee(const CMutableTransaction& tx, unsigned int nTxBytes, FeeRatePreset nSpeed, CAmount targetFee);
+    static CAmount GetNerocashPriorityFee(const CMutableTransaction& tx, unsigned int nTxBytes, FeeRatePreset nSpeed, CAmount targetFee);
     /**
      * Return the minimum required fee taking into account the
      * floating relay fee and user set minimum transaction fee
@@ -810,7 +810,7 @@ public:
     static CAmount GetRequiredFee(const CMutableTransaction& tx, unsigned int nTxBytes);
     /**
      * Return the minimum required fee taking into account the
-     * floating relay fee and user set minimum transaction fee, but not the Termucoin dust fee.
+     * floating relay fee and user set minimum transaction fee, but not the Nerocash dust fee.
      */
     static CAmount GetRequiredFee(unsigned int nTxBytes);
 
